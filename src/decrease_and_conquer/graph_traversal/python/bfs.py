@@ -19,6 +19,7 @@ matrix_with_cycle = [
 
 # better in breadth
 matrix =matrix_with_cycle
+matrix =matrix_without_cycles
 
 
 queue =[]
@@ -40,8 +41,12 @@ while (queue):
             pass
 
 
-print(visited)
-print(real_edges)
+if(len(visited) < real_edges):
+    print(f"the graph has cycles, there are  {real_edges} vs {visited}")
+else:
+    print(f"the graph has no  cycles, there are  {real_edges} vs {visited}")
+
+
     
 
 
