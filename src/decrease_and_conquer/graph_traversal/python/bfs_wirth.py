@@ -19,13 +19,13 @@ matrix_with_cycle = [
 
 # better in breadth
 matrix =matrix_with_cycle
-matrix =matrix_without_cycles
+#matrix =matrix_without_cycles
 
 
 
-w_register = [0,0,False, False] #list still we can change it for array of ints
+w_register = [0,0,0, 0] #list still we can change it for array of ints
 w_head = 0
-w_tail =0 
+w_tail =0
 
 w_visited = [True,False,False, False] #list still we can change it for array of ints
 real_edges= 0
@@ -41,8 +41,9 @@ while (w_head  <=  w_tail):
     w_head += 1
     for j in range(len(matrix[i])):
         if(matrix[i][j] > 0 and not w_visited[j] ):
-            w_tail += 1
+
             w_register[w_tail] = j
+            w_tail += 1
             w_visited[j]=True
             real_edges += 1
             print(f"tail {w_tail} head {w_head} register {w_register}")
@@ -53,7 +54,7 @@ while (w_head  <=  w_tail):
             pass
 
 
-if(len(visited) < real_edges):
+if(len(w_visited) < real_edges):
     print(f"the graph has cycles, there are  {real_edges} vs {w_visited}")
 else:
     print(f"the graph has no  cycles, there are  {real_edges} vs {w_visited}")
