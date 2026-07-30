@@ -19,7 +19,7 @@ matrix_with_cycle = [
 
 # better in breadth
 matrix =matrix_with_cycle
-matrix =matrix_without_cycles
+#matrix =matrix_without_cycles
 
 
 
