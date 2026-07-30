@@ -19,13 +19,13 @@ matrix_with_cycle = [
 
 # better in breadth
 matrix =matrix_with_cycle
-#matrix =matrix_without_cycles
+matrix =matrix_without_cycles
 
 
 
 w_register = [0,0,0, 0] #list still we can change it for array of ints
 w_head = 0
-w_tail =0
+w_tail =1
 
 w_visited = [True,False,False, False] #list still we can change it for array of ints
 real_edges= 0
@@ -35,7 +35,7 @@ i = 0
 
 
 
-while (w_head  <=  w_tail):
+while (w_head  <  w_tail):
     i= w_register[w_head]
     print(f"now we are on {w_register[w_head]} row")
     w_head += 1
